@@ -13,7 +13,7 @@ public class ToggleFireParticle : MonoBehaviour
     public ParticleSystem extinguishParticle;
     public GameObject pointLight;
 
-    bool isPlaying = true;
+    bool isPlaying = false;
 
     private void Start()
     {
