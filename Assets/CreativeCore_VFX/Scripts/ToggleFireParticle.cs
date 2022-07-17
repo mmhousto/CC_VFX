@@ -11,7 +11,7 @@ public class ToggleFireParticle : MonoBehaviour
     private ParticleSystem fireParticle;
     public ParticleSystem igniteParticle;
     public ParticleSystem extinguishParticle;
-    public GameObject pointLight;
+    public GameObject pointLight, magicVFX;
 
     bool isPlaying = false;
 
@@ -28,6 +28,7 @@ public class ToggleFireParticle : MonoBehaviour
             {
                 fireParticle.Stop();
                 pointLight.SetActive(false);
+                magicVFX.SetActive(false);
                 if (extinguishParticle != null)
                     extinguishParticle.Play();
                 isPlaying = false;
@@ -36,6 +37,7 @@ public class ToggleFireParticle : MonoBehaviour
             {
                 fireParticle.Play();
                 pointLight.SetActive(true);
+                magicVFX.SetActive(true);
                 if (igniteParticle != null)
                     igniteParticle.Play();
                 isPlaying = true;
